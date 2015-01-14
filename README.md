@@ -12,9 +12,9 @@ A Virtual machine bundled with essentials tools for Ruby on Rails development.
 After you install Vagrant and VirtualBox, open your terminal and type:
 
 ```
-  $ git clone https://github.com/hugw/vagrant-ruby-devbox.git
-  $ cd vagrant-ruby-devbox/vagrant
-  $ vagrant up
+$ git clone https://github.com/hugw/vagrant-ruby-devbox.git
+$ cd vagrant-ruby-devbox/vagrant
+$ vagrant up
 ```
 
 Now your ready to start! Your Box has two folder, "vagrant" and "devbox":
@@ -38,6 +38,15 @@ $ cd /devbox  # Ready to work
   * User: **postgres**, Pass: **postgres** (has remote access on port 5432 and host 0.0.0.0)
   * User: **root**, Pass: **root**
 
+* To config your Redis server, enter the following commands on the terminal:
+
+```
+cd redis-stable/utils
+sudo ./install_server.sh
+sudo service redis_6379 start # To start the server
+sudo service redis_6379 stop # To stop the server
+sudo update-rc.d redis_6379 defaults # To run the server on startup
+```
 
 * There is no rails gem installed by default so you can choose your own version to install.
 
@@ -51,6 +60,12 @@ $ cd /devbox  # Ready to work
 * There is a `.profile` inside /devbox folder that is linked to the virtual machine, any script you put on it, will be executed.
 
 * If you wish to customize your box, `/vagrant/Vagrantfile` is your aswner. If you need more help with configuring your box, access the [vagrant docs](https://docs.vagrantup.com/).
+
+* If you use mailcatcher gem, the port 1080 is already been forwarded by vagrant. But to work properly, you need to start mailcatcher binding to all IPs addresses.
+
+```
+mailcatcher --http-ip 0.0.0.0
+```
 
 ## Useful commands
 
@@ -86,6 +101,7 @@ $ vagrant destroy
 * PostgreSQL
 * RVM with Ruby 2.1.1
 * Heroku Toolbelt
+* Redis Server
 
 ## Version history
 
