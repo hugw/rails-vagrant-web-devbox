@@ -41,11 +41,11 @@ $ cd /devbox  # Ready to work
 * To config your Redis server, enter the following commands on the terminal:
 
 ```
-cd redis-stable/utils
-sudo ./install_server.sh
-sudo service redis_6379 start # To start the server
-sudo service redis_6379 stop # To stop the server
-sudo update-rc.d redis_6379 defaults # To run the server on startup
+$ cd redis-stable/utils
+$ sudo ./install_server.sh
+$ sudo service redis_6379 start # To start the server
+$ sudo service redis_6379 stop # To stop the server
+$ sudo update-rc.d redis_6379 defaults # To run the server on startup
 ```
 
 * There is no rails gem installed by default so you can choose your own version to install.
@@ -64,7 +64,7 @@ sudo update-rc.d redis_6379 defaults # To run the server on startup
 * If you use mailcatcher gem, the port 1080 is already been forwarded by vagrant. But to work properly, you need to start mailcatcher binding to all IPs addresses.
 
 ```
-mailcatcher --http-ip 0.0.0.0
+$ mailcatcher --http-ip 0.0.0.0
 ```
 
 ## Useful commands
