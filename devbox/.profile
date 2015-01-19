@@ -1,4 +1,3 @@
-
 # Get git branch function
 get_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -10,5 +9,5 @@ export PS1="\[\e[01;37m\]\u\[\e[0m\]\[\e[00;37m\] @ \[\e[0m\]\[\e[01;37m\]\h\[\e
 # Aliases
 alias rs="rails s -b 0.0.0.0" # For rails 4.2+ you need to use this alias because your server will bind by default to 127.0.0.1/localhost
 alias be="bundle exec" # Bundle exec
-alias ac="!git add --all && git commit" # Git add all and commit
+alias gac="git add --all && git commit" # Git add all and commit
 
