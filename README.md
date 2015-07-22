@@ -1,6 +1,6 @@
-# Vagrant Ruby DevBox
+# Vagrant WebDevBox
 
-A Virtual machine bundled with essentials tools for Ruby on Rails development.
+A Virtual machine bundled with essentials tools for web development.
 
 ## Requirements
 
