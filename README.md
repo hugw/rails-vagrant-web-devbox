@@ -1,4 +1,4 @@
-# Vagrant WebDevBox
+# Vagrant web development box
 
 A Virtual machine bundled with essentials tools for web development.
 
