@@ -12,8 +12,8 @@ A Virtual machine bundled with essentials tools for web development.
 After you install Vagrant and VirtualBox, open your terminal and type:
 
 ```
-$ git clone https://github.com/hugw/vagrant-ruby-devbox.git
-$ cd vagrant-ruby-devbox/vagrant
+$ git clone https://github.com/hugw/vagrant-web-devbox.git
+$ cd vagrant-web-devbox/vagrant
 $ vagrant up
 ```
 
